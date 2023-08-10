@@ -65,13 +65,13 @@ async function loadgallery(remainItemCount) {
 
     const node = createEleByTemp('gallery-item', {
         id: `#${items[displayedItemCount].match(
-            /meme\/(.+)\.(jpg|png|jfif|webp|gif)/
+            /meme\/(.+)\.(jpg|png|jpeg|jfif|webp|gif)/
         )[1]
             }`,
         src: `./${items[displayedItemCount]}`,
         alt: items[displayedItemCount],
         title: `# ${items[displayedItemCount].match(
-            /meme\/(.+)\.(jpg|png|jfif|webp|gif)/
+            /meme\/(.+)\.(jpg|png|jpeg|jfif|webp|gif)/
         )[1]
             }`,
     })
@@ -118,7 +118,7 @@ async function initgallery() {
     ).innerHTML = `目前已有 ${items.length} 张`
     document.getElementById('refresh-btn').onclick = () => {
         location.hash = `#${items[random(items.length - 1, 0)].match(
-            /meme\/(.+)\.(jpg|png|jfif|webp|gif)/
+            /meme\/(.+)\.(jpg|png|jpeg|jfif|webp|gif)/
         )[1]
             }`
     }
