@@ -96,7 +96,7 @@ function view() {
     view.querySelector('h2').innerHTML = `# ${name}`
     for (const i of items) {
         if (
-            i.search(new RegExp(`meme/${name}\.(jpg|png|jfif|webp|gif)`)) != -1
+            i.search(new RegExp(`meme/${name}\.(jpg|png|jpeg|jfif|webp|gif)`)) != -1
         ) {
             name = i
             break
